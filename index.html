@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="angularDms">
+<head>
+  <title>Angular DMS</title>
+</head>
+<body ng-init="lat='-12 30 15'">
+Latitude:
+<input type="angle" ng-model="lat" placeholder="deg | deg min sec"/>
+<input type="number" ng-model="lat"/>
+<input type="text" ng-model="lat"/>
+<br>
+Latitude: <span>{{lat | angle | number:3}}° | {{lat | angle | dms}}</span>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+<script src="angular-dms.js"></script>
+</body>
+</html>
